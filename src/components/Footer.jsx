@@ -12,7 +12,7 @@ function Footer() {
     >
       <div className="container py-6 text-center text-sm text-muted-foreground">
         <p>&copy; {new Date().getFullYear()} Humans of EV. All rights reserved.</p>
-        <p className="mt-1">Inspired by Humans of New York.</p>
+       
       </div>
     </motion.footer>
   );

@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+    /* Palette:
+      #626F47 - rgb(98, 111, 71)   -> HSL ~ 76 22% 36% (Primary)
+      #A4B465 - rgb(164, 180, 101) -> HSL ~ 73 30% 55% (Accent)
+      #F5ECD5 - rgb(245, 236, 213) -> HSL ~ 43 54% 90% (Background)
+      #F0BB78 - rgb(240, 187, 120) -> HSL ~ 34 80% 71% (Secondary)
+    */
+		--background: 43 54% 90%; /* Beige/Cream */
+		--foreground: 76 22% 20%; /* Darker Olive for better contrast */
+
+		--card: 43 54% 93%; /* Slightly darker beige for cards */
+		--card-foreground: 76 22% 20%;
+		--popover: 43 54% 88%; /* Slightly darker beige for popovers */
+		--popover-foreground: 76 22% 20%;
+
+		--primary: 76 22% 36%; /* Dark Olive Green */
+		--primary-foreground: 43 54% 95%; /* Light Beige/Cream */
+
+		--secondary: 34 80% 71%; /* Warm Orange/Gold */
+		--secondary-foreground: 76 22% 20%; /* Dark Olive */
+
+		--muted: 43 30% 85%; /* Muted Beige */
+		--muted-foreground: 76 15% 40%; /* Muted Olive */
+
+		--accent: 73 30% 55%; /* Light Olive Green */
+		--accent-foreground: 76 22% 15%; /* Darker Olive */
+
+		--destructive: 0 72% 51%; /* Keep Red for destructive actions */
+		--destructive-foreground: 0 0% 100%;
+
+		--border: 76 15% 75%; /* Light Olive-Gray Border */
+		--input: 76 15% 80%; /* Lighter Olive-Gray Input */
+		--ring: 73 30% 60%; /* Light Olive for focus */
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+    /* Optional: Define dark mode colors if needed later */
+		--background: 76 10% 15%;
+		--foreground: 43 30% 85%;
+
+		--card: 76 10% 18%;
+		--card-foreground: 43 30% 85%;
+		--popover: 76 10% 15%;
+		--popover-foreground: 43 30% 85%;
+
+		--primary: 73 30% 55%; /* Light Olive */
+		--primary-foreground: 76 22% 10%; /* Very Dark Olive */
+
+		--secondary: 34 70% 65%; /* Lighter Orange */
+		--secondary-foreground: 76 22% 10%;
+
+		--muted: 76 10% 25%;
+		--muted-foreground: 43 20% 70%;
+
+		--accent: 73 25% 45%; /* Darker Light Olive */
+		--accent-foreground: 43 40% 90%;
+
+		--destructive: 0 63% 45%;
+		--destructive-foreground: 0 0% 100%;
+
+		--border: 76 10% 30%;
+		--input: 76 10% 30%;
+		--ring: 73 30% 50%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground font-sans;
+		font-feature-settings: 'rlig' 1, 'calt' 1;
+	}
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+  p {
+     @apply leading-relaxed text-foreground/90;
+  }
+  .story-content p {
+    @apply mb-4;
+  }
+  .story-content img {
+    @apply my-6 rounded-lg shadow-md;
+  }
+}
+
+/* Remove or adjust gradient utility if not needed */
+/* @layer utilities {
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))];
+  }
+} */
